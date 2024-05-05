@@ -1,0 +1,24 @@
+services:
+  app:
+    image: 'bitnami/laravel:latest'
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./src:/app
+    networks:
+      - laravel
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USERNAME: root
+      DB_PASSWORD: secret
+      DB_DATABASE: laravel
+  mysql:
+    image: 'mysql:5.7'
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: secret
+    networks:
+      - laravel
+networks:
+  laravel:
