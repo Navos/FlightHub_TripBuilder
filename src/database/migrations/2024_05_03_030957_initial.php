@@ -58,18 +58,9 @@ return new class extends Migration
             $table->string('first_flight_time', 50)->nullable(false);
             $table->foreignId('second_flight_id')->nullable(true);
             $table->string('second_flight_time', 50)->nullable(true);
-            $table->foreignId('third_flight_id')->nullable(true);
-            $table->string('third_flight_time', 50)->nullable(true);
-            $table->foreignId('fourth_flight_id')->nullable(true);
-            $table->string('fourth_flight_time', 50)->nullable(true);
-            $table->foreignId('fifth_flight_id')->nullable(true);
-            $table->string('fifth_flight_time', 50)->nullable(true);
 
             $table->foreign('first_flight_id')->references('id')->on('flights');
             $table->foreign('second_flight_id')->references('id')->on('flights');
-            $table->foreign('third_flight_id')->references('id')->on('flights');
-            $table->foreign('fourth_flight_id')->references('id')->on('flights');
-            $table->foreign('fifth_flight_id')->references('id')->on('flights');
         });
     }
 

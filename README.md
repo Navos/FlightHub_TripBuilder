@@ -71,12 +71,6 @@ Body variables:
 * `first_flight_time`: (required) Datetime of the first flight. Ex: `2024-05-01T07:35:00-04:00`
 * `second_flight_id`: (sometimes required) Integer Id of the second flight.
 * `second_flight_time`: (sometimes required) Datetime of the second flight. Ex: `2024-05-01T07:35:00-04:00`
-* `third_flight_id`: (sometimes required) Integer Id of the third flight.
-* `third_flight_time`: (sometimes required) Datetime of the third flight. Ex: `2024-05-01T07:35:00-04:00`
-* `fourth_flight_id`: (sometimes required) Integer Id of the fourth flight.
-* `fourth_flight_time`: (sometimes required) Datetime of the fourth flight. Ex: `2024-05-01T07:35:00-04:00`
-* `fifth_flight_id`: (sometimes required) Integer Id of the fifth flight.
-* `fifth_flight_time`: (sometimes required) Datetime of the fifth flight. Ex: `2024-05-01T07:35:00-04:00`
 
 Example Response:
 ```

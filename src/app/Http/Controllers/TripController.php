@@ -36,12 +36,6 @@ class TripController extends Controller
             'first_flight_time' => ['required', 'date'],
             'second_flight_id' => ['nullable', 'exists:flights,id'],
             'second_flight_time' => ['required_with:second_flight_id', 'date'],
-            'third_flight_id' => ['nullable', 'exists:flights,id'],
-            'third_flight_time' => ['required_with:third_flight_id', 'date'],
-            'fourth_flight_id' => ['nullable', 'exists:flights,id'],
-            'fourth_flight_time' => ['required_with:fourth_flight_id', 'date'],
-            'fifth_flight_id' => ['nullable', 'exists:flights,id'],
-            'fifth_flight_time' => ['required_with:fifth_flight_id', 'date'],
         ]);
 
         $flightIds = [];
@@ -66,7 +60,7 @@ class TripController extends Controller
     }
 
     public function getTrips(Request $request) {
-        $columns = ['id', 'type', 'total_price','first_flight_id','first_flight_time','second_flight_id','second_flight_time','third_flight_id','third_flight_time','fourth_flight_id','fourth_flight_time','fifth_flight_id','fifth_flight_time'];
+        $columns = ['id', 'type', 'total_price','first_flight_id','first_flight_time','second_flight_id','second_flight_time'];
         $validated = $request->validate([
             'sort_column' => ['required_with:sort_direction', Rule::in($columns)],
             'sort_direction' => ['required_with:sort_column', Rule::in(['asc', 'desc'])],
