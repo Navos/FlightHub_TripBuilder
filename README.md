@@ -88,3 +88,11 @@ Example Response:
 ```
 
 ### <ins>GET /api/getTrips</ins>
+
+Get all saved trips
+
+Query variables:
+* sort_column (optional): Column to sort by. Accepted values: `id`, `type`, `total_price`,`first_flight_id`,`first_flight_time`,`second_flight_id`,`second_flight_time`
+* sort_direction (optional): Direction to sort the column. Accepted values: `asc` or `desc`
+* page (optional): Integer. Page of results to grab. Minimum value is 1.
+* limit (optional): Integer. Number of results by page. Between 1 and 10.
