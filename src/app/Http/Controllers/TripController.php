@@ -89,8 +89,8 @@ class TripController extends Controller
 
     private function findOneWayFlight(Request $request) {
         $validated = $request->validate([
-            'departure_airport' => ['required'],
-            'arrival_airport' => ['required'],
+            'departure_airport' => ['required', 'exists:airports,code'],
+            'arrival_airport' => ['required', 'exists:airports,code'],
             'departure_date' => ['required'],
             'preferred_airline' => ['exists:airlines,code']
         ]);
@@ -109,8 +109,8 @@ class TripController extends Controller
 
     private function findRoundTripFlight(Request $request) {
         $validated = $request->validate([
-            'departure_airport' => ['required'],
-            'arrival_airport' => ['required'],
+            'departure_airport' => ['required', 'exists:airports,code'],
+            'arrival_airport' => ['required', 'exists:airports,code'],
             'departure_date' => ['required'],
             'return_date' => ['required'],
             'preferred_airline' => ['exists:airlines,code']
