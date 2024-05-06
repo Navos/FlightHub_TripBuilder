@@ -96,3 +96,36 @@ Query variables:
 * sort_direction (optional): Direction to sort the column. Accepted values: `asc` or `desc`
 * page (optional): Integer. Page of results to grab. Minimum value is 1.
 * limit (optional): Integer. Number of results by page. Between 1 and 10.
+
+Example Response:
+```
+[
+  {
+    "id":3,
+    "type":"round_trip",
+    "total_price":"100",
+    "first_flight_id":5,
+    "first_flight_time":"2015-07-21T02:44:26+0000",
+    "second_flight_id":6,
+    "second_flight_time":"2024-01-15T01:20:50+0000"
+  },
+  {
+    "id":4,
+    "type":"one_way",
+    "total_price":"200",
+    "first_flight_id":7,
+    "first_flight_time":"2018-06-27T10:58:16+0000",
+    "second_flight_id":8,
+    "second_flight_time":"1998-04-20T23:07:21+0000"
+  },
+  {
+    "id":5,
+    "type":"round_trip",
+    "total_price":"300",
+    "first_flight_id":9,
+    "first_flight_time":"1993-02-02T19:02:54+0000",
+    "second_flight_id":10,
+    "second_flight_time":"1981-03-10T03:59:28+0000"
+  }
+]
+```

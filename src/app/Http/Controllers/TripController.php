@@ -7,7 +7,6 @@ use App\Models\Trip;
 use DateTimeImmutable;
 use DateTimeZone;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
 
 class TripController extends Controller

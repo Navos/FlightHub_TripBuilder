@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use App\Models\Trip;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Log;
 use Tests\TestCase;
 
 class TripControllerTest extends TestCase
